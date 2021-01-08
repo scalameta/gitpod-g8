@@ -1,0 +1,2 @@
+To run this repository with Gitpod, open https://gitpod.io/#template=template_name/https://github.com/scalameta/gitpod-g8,
+and replace *template_name* with gitter template name. The template that is going to be opened is *scala/template_name.g8*.
