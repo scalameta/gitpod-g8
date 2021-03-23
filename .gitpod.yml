@@ -1,7 +1,7 @@
 vscode:
   extensions:
-    - scala-lang.scala@0.3.9:kklqw+c/dNRmtTU8B5repw==
-    - scalameta.metals@1.9.10:r3gtfBMh7PLpSAzUIaIL3Q==
+    - scala-lang.scala@0.5.0:3FIiaU1vnooQsX3PkBlBvQ==
+    - scalameta.metals@1.10.0:wOYpsld/e93zZ250A0uKHA==
 tasks:
 - init: source ./gitpod_init.sh 
 - command: source ./gitpod_command.sh

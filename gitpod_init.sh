@@ -2,7 +2,7 @@
 
 METALS_DIR="$GITPOD_REPO_ROOT/.metals"
 APPS_DIR="$METALS_DIR/apps"
-METALS_VERSION="0.9.8"
+METALS_VERSION="0.10.0"
 
 mkdir -p $APPS_DIR
 
@@ -21,10 +21,6 @@ cs install --install-dir $APPS_DIR sbt
 
 source ./template_setup.sh
 
-cs fetch org.scalameta:metals_2.12:$METALS_VERSION --cache=$METALS_DIR/coursier 
-cs fetch org.scalameta:scalafmt-cli_2.12:2.7.5 --cache=$METALS_DIR/coursier 
-
-sbt -Dbloop.export-jar-classifiers=sources bloopInstall
-bloop compile --cascade root
+cs launch org.scalameta:metals_2.12:$METALS_VERSION --cache=$METALS_DIR/coursier  --main-class scala.meta.metals.DownloadDependencies
 
 echo "export PATH=\$PATH:/usr/local/openjdk-8/bin:$APPS_DIR" >> ~/.bashrc
