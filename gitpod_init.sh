@@ -2,7 +2,7 @@
 
 METALS_DIR="$GITPOD_REPO_ROOT/.metals"
 APPS_DIR="$METALS_DIR/apps"
-METALS_VERSION="0.10.0"
+METALS_VERSION="1.0.1"
 
 mkdir -p $APPS_DIR
 
@@ -21,6 +21,6 @@ cs install --install-dir $APPS_DIR sbt
 
 source ./template_setup.sh
 
-cs launch org.scalameta:metals_2.12:$METALS_VERSION --cache=$METALS_DIR/coursier  --main-class scala.meta.metals.DownloadDependencies
+cs launch org.scalameta:metals_2.13:$METALS_VERSION --cache=$METALS_DIR/coursier  --main-class scala.meta.metals.DownloadDependencies
 
 echo "export PATH=\$PATH:/usr/local/openjdk-8/bin:$APPS_DIR" >> ~/.bashrc
